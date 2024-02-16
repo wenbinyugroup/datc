@@ -1,0 +1,38 @@
+<Description>
+   ABAQUS/ABQcaeK rank 0 received the ABORT signal
+
+</Description>
+
+<Context>
+   CAE
+</Context>
+
+<Callstack>
+</Callstack>
+
+<Memory>
+   <Current>            0 GB </Current>
+   <Resident>           0 GB </Resident>
+   <Physical>         255 GB </Physical>
+   <Limit>              0 GB </Limit>
+   <Accessible>       255 GB </Accessible>
+   <Available>        155 GB </Available>
+   <Allocator>            DL </Allocator>
+</Memory>
+
+<Swap>
+       <Size>         316 GB </Size>
+       <Used>         121 GB </Used>
+       <Free>         194 GB </Free>
+</Swap>
+
+<Directories>
+  <current> D:\Bangde\GUIcode\Test example\ML </current> <free>    580 GB </free>   <used>    793 GB </used> 
+     <temp> C:\Users\liub2\AppData\Local\Temp\4 </temp>    <free>     75 GB </free>
+</Directories>
+
+<Installation>
+     <Version> 2023 6.23-1 </Version>
+       <Build> 2022_09_28-13.11.55 183150 </Build>
+</Installation>
+
