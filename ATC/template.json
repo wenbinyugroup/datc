@@ -1,0 +1,9 @@
+{
+    "name": "sq_plate_conv_comp_2levels_ps_md",
+    "version": "0.8",
+    "setting": {
+        "log_level_cmd": "info",
+        "log_level_file": "debug",
+        "log_file_name": "eval.log"
+    }
+}
