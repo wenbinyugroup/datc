@@ -1,0 +1,71 @@
+from part import *
+from material import *
+from section import *
+from optimization import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='plate400s4r', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='Job-1', nodalOutputPrecision=SINGLE, 
+    numCpus=1, numGPUs=0, numThreadsPerMpiProcess=1, queue=None, resultsFormat=
+    ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=0, 
+    waitMinutes=0)
+mdb.Model(modelType=STANDARD_EXPLICIT, name='plate2000-buckling')
+mdb.models.changeKey(fromName='plate400s4r', toName='plate400s4r-u')
+mdb.ModelFromInputFile(inputFileName=
+    'D:/Bangde/GUIcode/Testexample02202024/Plate/SA/plate400s4r.inp', name=
+    'plate400s4r')
+del mdb.models['plate400s4r']
+mdb.ModelFromInputFile(inputFileName=
+    'D:/Bangde/GUIcode/GUIcode02122024/Testexample/Plate/SA/plate400s4r.inp', 
+    name='plate400s4r')
+del mdb.models['plate2000-buckling']
+mdb.models.changeKey(fromName='plate400s4r', toName='plate2000-buckling')
+mdb.models['plate400s4r-u'].parts['PART-1'].MaterialOrientation(
+    additionalRotationType=ROTATION_NONE, axis=AXIS_1, fieldName='', localCsys=
+    None, orientationType=GLOBAL, region=Region(
+    elements=mdb.models['plate400s4r-u'].parts['PART-1'].elements.getSequenceFromMask(
+    mask=('[#ffffffff:12 #ffff ]', ), )))
+del mdb.jobs['Job-1']
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='plate400s4r-u', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='testori', nodalOutputPrecision=SINGLE, 
+    numCpus=1, numGPUs=0, numThreadsPerMpiProcess=1, queue=None, resultsFormat=
+    ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=0, 
+    waitMinutes=0)
+mdb.models['plate400s4r-u'].parts['PART-1'].materialOrientations[0].setValues(
+    fieldName='PART-1_ORI-1-DISCORIENT', localCsys=None, orientationType=FIELD)
+# Save by liub2 on 2024_02_20-20.46.55; build 2023 2022_09_28-13.11.55 183150
+from part import *
+from material import *
+from section import *
+from optimization import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.ModelFromInputFile(inputFileName=
+    'D:/Bangde/GUIcode/Testexample02202024/Plate/CAE model/plate400s4r.inp', 
+    name='plate400s4r')
+mdb.models['plate400s4r'].Material(name='Material-1')
+mdb.models['plate400s4r'].materials['Material-1'].Elastic(table=((37000.0, 
+    9000.0, 9000.0, 0.28, 0.28, 0.28, 4000.0, 4000.0, 4000.0), ), type=
+    ENGINEERING_CONSTANTS)
+del mdb.models['plate400s4r-u']
+del mdb.models['plate2000-buckling']
+del mdb.jobs['testori']
+# Save by liub2 on 2024_02_21-10.20.55; build 2023 2022_09_28-13.11.55 183150
