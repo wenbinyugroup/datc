@@ -40,7 +40,7 @@ class MLDB(AFXDataDialog):
             
         VAligner_3 = AFXVerticalAligner(p=self, opts=0, x=0, y=0, w=0, h=0,
             pl=0, pr=0, pt=0, pb=0)
-        AFXTextField(p=VAligner_3, ncols=20, labelText='Nerual network        ', tgt=form.NN_mlKw, sel=0)
+        AFXTextField(p=VAligner_3, ncols=20, labelText='Architecture      ', tgt=form.NN_mlKw, sel=0)
         AFXTextField(p=VAligner_3, ncols=20, labelText='Optimizer', tgt=form.Opti_mlKw, sel=0)
         AFXTextField(p=VAligner_3, ncols=20, labelText='Learning rate', tgt=form.lr_mlKw, sel=0)
         AFXTextField(p=VAligner_3, ncols=20, labelText='Epochs', tgt=form.epoch_mlKw, sel=0)
